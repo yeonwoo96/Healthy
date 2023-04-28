@@ -63,6 +63,9 @@ const Home = () => {
     align-items: center;
     background: #111;
     color: #fff;
+    &:hover {
+      background: #757575;
+    }
   `;
   const QRwrapper = styled.div`
     display: flex;
@@ -71,6 +74,15 @@ const Home = () => {
     align-items: center;
     img {
       width: 100%;
+    }
+  `;
+  const TwoItemSection = styled.div`
+    .Btn {
+      background: #fff;
+      color: #111;
+      &:hover {
+        background: #757575;
+      }
     }
   `;
   return (
@@ -204,6 +216,15 @@ const Home = () => {
         </TextSection>
       </Article>
       {/*  */}
+      <TwoItemSection>
+        <h3>Trending Now</h3>
+        <div className="Items">
+          <div className="Item">
+            <h4>에어 포스1</h4>
+            <Btn className="Btn">구매하기</Btn>
+          </div>
+        </div>
+      </TwoItemSection>
     </Wrapper>
   );
 };
