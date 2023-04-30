@@ -9,7 +9,6 @@ const NoticeArr = [
   { Notice: "반품 및 환불 지연 안내" },
 ];
 const HeaderWrap = styled.div`
-  width: 100vw;
   & > div {
     padding: 0 2%;
   }
@@ -66,6 +65,7 @@ const Header1 = styled.div`
 const Header2 = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  overflow: hidden;
   /* display: flex;
   justify-content: space-between;
   align-items: center; */

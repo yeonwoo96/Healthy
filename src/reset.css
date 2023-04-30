@@ -3,6 +3,12 @@
    License: none (public domain)
 */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap");
+* {
+  line-height: 1.4;
+  color: #111;
+  text-decoration: none;
+  font-family: "Noto Sans KR", sans-serif;
+}
 html,
 body,
 div,
@@ -125,12 +131,6 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-}
-* {
-  line-height: 1.4;
-  text-decoration: none;
-  color: #000;
-  font-family: "Noto Sans KR", sans-serif;
 }
 p {
   font-size: 16px;

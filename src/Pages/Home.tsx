@@ -1,90 +1,119 @@
 import React from "react";
 import styled from "styled-components";
+import SlideItem from "../Components/SlideItem";
+import { Btn } from "../Components/Btn";
+import { useRecoilValue } from "recoil";
+import { ShoesAtom } from "../Store/Atom";
+const Wrapper = styled.div`
+  width: 100%;
+  & > article {
+    padding: 0 2%;
+  }
+`;
+const Article = styled.article`
+  margin-top: 84px;
+  .MainImage {
+    width: 100%;
+  }
+  video {
+    width: 100%;
+  }
+`;
+const TextSection = styled.section`
+  margin-top: 48px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  @media screen and (max-width: 960px) {
+    align-items: flex-start;
+    text-align: start;
+  }
+  .subTitle {
+    font-weight: 500;
+  }
+  h3 {
+    margin-bottom: 24px;
+    font-weight: 800;
+  }
+  .description {
+    margin-bottom: 24px;
+  }
+  .QRment {
+    font-size: 20px;
+    margin-top: 6px;
+  }
+`;
+const BtnsWrapper = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 6px;
+  margin: 20px 0;
+`;
 
-const Home = () => {
-  const Wrapper = styled.div`
-    width: 100vw;
-    & > article {
-      padding: 0 2%;
-    }
-  `;
-  const Article = styled.article`
-    margin-top: 84px;
-    .MainImage {
-      width: 100%;
-    }
-    video {
-      width: 100%;
-    }
-  `;
-  const TextSection = styled.section`
-    margin-top: 48px;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    text-align: center;
-    @media screen and (max-width: 960px) {
-      align-items: flex-start;
-      text-align: start;
-    }
-    .subTitle {
-      font-weight: 500;
-    }
-    h3 {
-      margin-bottom: 24px;
-      font-weight: 800;
-    }
-    .description {
-      margin-bottom: 24px;
-    }
-    .QRment {
-      font-size: 20px;
-      margin-top: 6px;
-    }
-  `;
-  const BtnsWrapper = styled.div`
-    display: flex;
-    width: 100vw;
-    justify-content: center;
-    gap: 6px;
-    margin: 20px 0;
-  `;
-  const Btn = styled.button`
-    padding: 6px 20px;
-    border-radius: 30px;
-    border: 1.5px solid transparent;
-    font-size: 16px;
-    line-height: 24px;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    background: #111;
-    color: #fff;
+const QRwrapper = styled.div`
+  display: flex;
+  width: 100%;
+  flex-flow: column;
+  align-items: center;
+  img {
+    width: 100%;
+  }
+`;
+
+const TwoItemSection = styled.article`
+  margin-top: 80px;
+  h3 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  .Btn {
+    background: #fff;
+    color: #111;
     &:hover {
       background: #757575;
     }
-  `;
-  const QRwrapper = styled.div`
+  }
+  .Items {
+    width: 100%;
     display: flex;
-    width: 100vw;
-    flex-flow: column;
-    align-items: center;
-    img {
-      width: 100%;
-    }
-  `;
-  const TwoItemSection = styled.div`
-    .Btn {
-      background: #fff;
-      color: #111;
-      &:hover {
-        background: #757575;
-      }
-    }
-  `;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+`;
+const Item = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: end;
+  position: relative;
+  h4 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 16px;
+  }
+`;
+const Text = styled.div`
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  left: 20px;
+  bottom: 40px;
+`;
+const Image = styled.div`
+  z-index: -1;
+  width: 100%;
+  top: 0;
+  left: 0;
+  img {
+    width: 100%;
+  }
+`;
+const Home = () => {
+  const ItemList = useRecoilValue(ShoesAtom);
+  console.log(ItemList);
   return (
     <Wrapper>
       <Article style={{ margin: 0 }}>
@@ -219,12 +248,27 @@ const Home = () => {
       <TwoItemSection>
         <h3>Trending Now</h3>
         <div className="Items">
-          <div className="Item">
-            <h4>에어 포스1</h4>
-            <Btn className="Btn">구매하기</Btn>
-          </div>
+          <Item>
+            <Image>
+              <img src="image/나이키덩크.jpg" alt="나이키 덩크" />
+            </Image>
+            <Text>
+              <h4>나이키 덩크</h4>
+              <Btn>구매하기</Btn>
+            </Text>
+          </Item>
+          <Item>
+            <Image>
+              <img src="image/에어포스1.webp" alt="나이키 덩크" />
+            </Image>
+            <Text>
+              <h4>에어포스 1</h4>
+              <Btn>구매하기</Btn>
+            </Text>
+          </Item>
         </div>
       </TwoItemSection>
+      <SlideItem ItemList={ItemList}></SlideItem>
     </Wrapper>
   );
 };
