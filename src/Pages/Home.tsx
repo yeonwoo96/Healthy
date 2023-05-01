@@ -61,7 +61,7 @@ const QRwrapper = styled.div`
     width: 100%;
   }
 `;
-
+// 투아이템
 const TwoItemSection = styled.article`
   margin-top: 80px;
   h3 {
@@ -111,6 +111,38 @@ const Image = styled.div`
     width: 100%;
   }
 `;
+const Community = styled.article`
+  margin-top: 80px;
+  h3 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  .items {
+    display: flex;
+    gap: 12px;
+  }
+  .item {
+  }
+  .imageWrap {
+    img {
+      width: 100%;
+    }
+  }
+  .TextWrap {
+    h4 {
+      margin-top: 20px;
+      font-size: 20px;
+    }
+    p {
+      margin-top: 14px;
+    }
+    .button {
+      margin-top: 32px;
+    }
+  }
+`;
+// 쓰리아이템
+const ThreeItemSection = styled(TwoItemSection)``;
 const Home = () => {
   const ItemList = useRecoilValue(ShoesAtom);
   console.log(ItemList);
@@ -269,6 +301,91 @@ const Home = () => {
         </div>
       </TwoItemSection>
       <SlideItem ItemList={ItemList}></SlideItem>
+      <ThreeItemSection>
+        <h3>Apparel Essentials</h3>
+        <div className="Items">
+          <Item>
+            <Image>
+              <img src="image/재킷&베스트.webp" alt="재킷&베스트" />
+            </Image>
+            <Text>
+              <h4>재킷 & 베스트</h4>
+            </Text>
+          </Item>
+          <Item>
+            <Image>
+              <img src="image/팬츠&타이츠.webp" alt="팬츠&타이츠" />
+            </Image>
+            <Text>
+              <h4>팬츠 & 타이츠</h4>
+            </Text>
+          </Item>
+          <Item>
+            <Image>
+              <img src="image/후디&크루.webp" alt="후디&크루" />
+            </Image>
+            <Text>
+              <h4>후디 & 크루</h4>
+            </Text>
+          </Item>
+        </div>
+      </ThreeItemSection>
+      <Community>
+        <h3>나이키 커뮤니티와 함께 하기</h3>
+        <div className="items">
+          <div className="item">
+            <div className="imageWrap">
+              <img
+                src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_668,c_limit/e22a3c9d-5f93-4b89-90d4-e912e7149ba0/nike-just-do-it.jpg"
+                alt="나이키앱"
+              />
+            </div>
+            <div className="TextWrap">
+              <h4>나이키 앱</h4>
+              <p>
+                원하는 것을 누구보다 빠르게, 새로운 영감으로 매일을 새롭게,
+                상상만 했던 경험을 현실로. 여러분의 매일을 나이키 앱에서 바꿔
+                보세요.
+              </p>
+              <Btn className="button">자세히 보기</Btn>
+            </div>
+          </div>
+          <div className="item">
+            <div className="imageWrap">
+              <img
+                src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_668,c_limit/7c590e5c-56a4-41f6-b53f-cd6fddfefe8d/nike-just-do-it.jpg"
+                alt="나이키 트레이닝 클럽"
+              />
+            </div>
+            <div className="TextWrap">
+              <h4>나이키 트레이닝 클럽(NTC)</h4>
+              <p>
+                NCT 앱으로 개인 맞춤형 트레이닝 가이드를 만나 보세요 운동,
+                마음가짐, 영양, 수면 등 몸과 마음을 위한 전문가 팁도 함께
+                제공됩니다.
+              </p>
+              <Btn className="button">자세히 보기</Btn>
+            </div>
+          </div>
+          <div className="item">
+            <div className="imageWrap">
+              <img
+                src="https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_668,c_limit/2d206354-2b4c-46f1-9b10-a9e02529b180/nike-just-do-it.jpg"
+                alt="나이키 런 클럽(NRC)"
+              />
+            </div>
+            <div className="TextWrap">
+              <h4>나이키 런 클럽(NRC)</h4>
+              <p>
+                NRC 앱과 함께 언제 어디서든 러닝을 시작해 보세요. 전문 러닝
+                코치들의 오디오 가이드 런으로 올바른 러닝 루틴을 만들 수
+                있습니다.
+              </p>
+              <Btn className="button">자세히 보기</Btn>
+            </div>
+          </div>
+        </div>
+      </Community>
     </Wrapper>
   );
 };
