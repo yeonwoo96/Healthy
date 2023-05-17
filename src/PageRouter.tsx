@@ -1,7 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import Home from "./Pages/Home";
-import Menu from "./Pages/Menu";
+import Sale from "./Pages/Sale";
+import Signup from "./Pages/Signup";
 
 export const PageRouter = createBrowserRouter([
   {
@@ -13,8 +14,12 @@ export const PageRouter = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "menu",
-        element: <Menu />,
+        path: "sale",
+        element: <Sale />,
+      },
+      {
+        path: "signup",
+        element: <Signup />,
       },
     ],
   },

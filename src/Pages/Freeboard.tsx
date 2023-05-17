@@ -1,7 +1,7 @@
 import React from "react";
 
-const Nikeapp = () => {
+const Freeboard = () => {
   return <div></div>;
 };
 
-export default Nikeapp;
+export default Freeboard;

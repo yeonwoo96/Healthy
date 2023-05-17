@@ -168,10 +168,6 @@ const Home = () => {
             <Btn>자세히 보기</Btn>
             <Btn>멤버 가입 & 마케팅 수신동의</Btn>
           </BtnsWrapper>
-          <QRwrapper>
-            <img src="image/QRcode.png" alt="QRcode"></img>
-            <p className="QRment">나이키 앱에서 확인하기</p>
-          </QRwrapper>
         </TextSection>
       </Article>
       <Article>
@@ -198,10 +194,6 @@ const Home = () => {
             저지를 가장 먼저 만나 보세요.
             <br /> 나이키 앱을 다운로드하고 축구를 관심사로 설정해 보세요.
           </p>
-          <QRwrapper>
-            <img src="image/QRcode.png" alt="QRcode"></img>
-            <p className="QRment">나이키 앱</p>
-          </QRwrapper>
         </TextSection>
       </Article>
       <Article>

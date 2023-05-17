@@ -62,6 +62,7 @@ const Header1 = styled.div`
     }
   }
 `;
+const Logo = styled.div``;
 const Header2 = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -187,13 +188,10 @@ const Header = () => {
         </ul>
         <ul className="Right1">
           <li>
-            <Link to={""}>매장 찾기</Link>
-          </li>
-          <li>
             <Link to={""}>고객센터</Link>
           </li>
           <li>
-            <Link to={""}>가입하기</Link>
+            <Link to={"signup"}>가입하기</Link>
           </li>
           <li>
             <Link to={""}>로그인</Link>
@@ -201,44 +199,39 @@ const Header = () => {
         </ul>
       </Header1>
       <Header2>
-        <svg
-          aria-hidden="true"
-          className="pre-logo-svg"
-          focusable="false"
-          viewBox="0 0 24 24"
-          role="img"
-          width="24px"
-          height="24px"
-          fill="none"
-        >
-          <path
-            fill="currentColor"
-            fill-rule="evenodd"
-            d="M21 8.719L7.836 14.303C6.74 14.768 5.818 15 5.075 15c-.836 0-1.445-.295-1.819-.884-.485-.76-.273-1.982.559-3.272.494-.754 1.122-1.446 1.734-2.108-.144.234-1.415 2.349-.025 3.345.275.2.666.298 1.147.298.386 0 .829-.063 1.316-.19L21 8.719z"
-            clip-rule="evenodd"
-          ></path>
-        </svg>
+        <Logo>
+          <Link to={"/"}>
+            <svg
+              aria-hidden="true"
+              className="pre-logo-svg"
+              focusable="false"
+              viewBox="0 0 24 24"
+              role="img"
+              width="24px"
+              height="24px"
+              fill="none"
+            >
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M21 8.719L7.836 14.303C6.74 14.768 5.818 15 5.075 15c-.836 0-1.445-.295-1.819-.884-.485-.76-.273-1.982.559-3.272.494-.754 1.122-1.446 1.734-2.108-.144.234-1.415 2.349-.025 3.345.275.2.666.298 1.147.298.386 0 .829-.063 1.316-.19L21 8.719z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </Link>
+        </Logo>
         <ul className="Center2">
           <li>
-            <Link to={""}>New Releases</Link>
+            <Link to={""}>자유 게시판</Link>
           </li>
           <li>
-            <Link to={""}>Men</Link>
+            <Link to={""}>유머/정보</Link>
           </li>
           <li>
-            <Link to={""}>Women</Link>
+            <Link to={""}>스포츠</Link>
           </li>
           <li>
-            <Link to={""}>Kids</Link>
-          </li>
-          <li>
-            <Link to={""}>Sale</Link>
-          </li>
-          <li>
-            <Link to={""}>SNKRS</Link>
-          </li>
-          <li>
-            <Link to={""}>나이키앱</Link>
+            <Link to={"sale"}>스포츠 용품</Link>
           </li>
         </ul>
         <div className="Right2">

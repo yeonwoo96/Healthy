@@ -1,7 +1,7 @@
 import React from "react";
 
-const New = () => {
+const Humor = () => {
   return <div></div>;
 };
 
-export default New;
+export default Humor;

@@ -8,8 +8,10 @@ import {
   TfiInstagram,
 } from "react-icons/tfi";
 const FooterWrap = styled.div`
+  position: absolute;
+  bottom: 0;
+  height: 300px; /* footer의 높이 */
   width: 100%;
-  min-height: 200px;
   margin-top: 80px;
   background: #111;
   > div {
@@ -118,11 +120,6 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      {/* 미들 */}
-      <div className="middle">d</div>
-      <hr></hr>
-      {/* 바텀 */}
-      <div className="bottom">d</div>
     </FooterWrap>
   );
 };

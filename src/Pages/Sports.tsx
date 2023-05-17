@@ -1,7 +1,7 @@
 import React from "react";
 
-const Kids = () => {
+const Sports = () => {
   return <div></div>;
 };
 
-export default Kids;
+export default Sports;
